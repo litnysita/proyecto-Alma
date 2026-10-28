@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas mexicanas | El Alma de México</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <a href="index.html" class="logo">
+        <span class="calavera">✞</span>
+        <span>
+            EL ALMA<br>DE MÉXICO
+            <small>DÍA DE MUERTOS</small>
+        </span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn"
+    aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="historia.html">Historia</a>
+        <a href="leyendas.html" class="activo">Leyendas</a>
+        <a href="ofrendas.html">Ofrendas</a>
+        <a href="tradiciones.html">Tradiciones</a>
+        <a href="galeria.html">Galería</a>
+        <a href="juego.html">Juegos</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="portada">
+        <div class="portada-texto">
+            <p class="etiqueta">RELATOS DE GENERACIÓN EN GENERACIÓN</p>
+
+            <h1>Historias que viven entre <span>el misterio y la tradición.</span></h1>
+
+            <p class="descripcion">
+                México guarda relatos de seres misteriosos, apariciones
+                y mundos espirituales. Descubre algunas de las leyendas
+                más conocidas de nuestra cultura.
+            </p>
+
+            <a href="#relatos" class="boton">DESCUBRIR LEYENDAS </a>
+        </div>
+
+        <div class="portada-imagen" role="img"
+        aria-label="Ambiente misterioso de una celebración tradicional"></div>
+    </section>
+
+    <section class="seccion" id="relatos">
+
+        <div class="titulo-seccion">
+            <p class="etiqueta">LEYENDAS POPULARES</p>
+            <h2>Relatos del <span>folclore mexicano</span></h2>
+            <p>
+                Historias que han cambiado con el tiempo y que
+                cada comunidad cuenta a su manera.
+            </p>
+        </div>
+
+        <div class="tarjetas">
+
+            <article class="contenido-card">
+                <img class="foto-tradicion"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhuQB_dVCc1JrODS2mApt5RPtdw-osm7g-8CnOUQ5mtw&s=10"
+                alt="Paisaje misterioso entre árboles">
+
+                <div class="contenido">
+                    <p class="etiqueta">LEYENDA POPULAR</p>
+                    <h3>La Llorona</h3>
+
+                    <p>
+                        No hay historia que se cuente con más frecuencia que "la llorona".
+
+                        Dicen algunos que esta historia tiene una base histórica. 
+                    </p>
+
+                    <button class="boton-secundario"
+                    onclick="mostrarHistoria('llorona')">
+                        Leer historia
+                    </button>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img class="foto-tradicion"
+                src="https://outletminero.org/content/images/2021/01/El-Charro-Negro.jpeg"
+                alt="Camino oscuro durante la noche">
+
+                <div class="contenido">
+                    <p class="etiqueta">MISTERIO NOCTURNO</p>
+                    <h3>El Charro Negro</h3>
+
+                    <p>
+                        Un jinete vestido de negro aparece en caminos
+                        solitarios. Sus encuentros forman parte de
+                        numerosos relatos populares.
+                    </p>
+
+                    <button class="boton-secundario"
+                    onclick="mostrarHistoria('charro')">
+                        Leer historia
+                    </button>
+                </div>
+            </article>
+
+            <article class="contenido-card">
+                <img class="foto-tradicion"
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIALkA9gMBIgACEQEDEQH/xAAbAAADAAMBAQAAAAAAAAAAAAADBAUBAgYAB//EAEMQAAIBAwIDBQQHBgUEAQUAAAECAwAEERIhBTFBEyJRYXEUMoGRBkKhscHR8CMzUmJy4TQ1Q3PxFSREsqI2U4Kzwv/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwAEBQb/xAAmEQACAgICAgICAgMAAAAAAAAAAQIRAyESMUFRBCITYSOBBTJx/9oADAMBAAIRAxEAPwCPa+75VtMMzJ6itIDmPbwrctl4mPjXreD5ynyscUdPCipGTueXUUKBveJHLb7KYjOtFYEB+h/Olm2LixpvYGWPsIjH/pc4z1Rug9KcgIYJIxBDKRv4il72ZDw05ADh1DL500kR9iGNiUyBjqa5b+2j1ZR/jTl3YjYs0k9wy4yToX55NHspiOITzadSA9kR4j6320vwyQRx3Rc6XUZAI5n/AJpyxtX9kiCSxlnBZgx0kb/by5ikTTSTOjJGcW5RXoYuYI3nMLaEkOMNjZ1PL0pQjs7iLtAVUOpIxvjNNXNtcyW0Qxolj3TBBDjw23rWyuIrolbghZ7cggtzKg7j5mhyrTM8SdSXZgYvLy+EWkq0erfxBqaQRnSuCeWaaiVbb6QGIMFjLcyM7Y+2sBNUuBg4XB386pifg5/nVGpvwKaR/B8ayNjgU1ImOQrUxkbgV0nhrIn2eiaPkMj1reQfsw4GShz8K1XAbvocHlReyUoRFJjPSkdnbicbNmGYmHQihzd+1dB1XI9a8smEAkBG3OvcrdmPLc0p0VSPRPqt10+Ao8crNGrbGlbdAYVwSDjlRYFxMIS4DMe6G2DVpULCMpMzcQ6RrgbQ7HGOhoU0ga1CMNLAgEeNMyq6TpHIjIV3IYUK8QPF2n1l+6gmO41phVYxuGUBiDkA8jRbiLspDcW64hJG3PGeh/Cl4CZYUbrimFvlgmtop9oZoVjcsOmQM/aCKSbp2Xw4+acQc9vHdpqCgPjp0qYJHspCkozF1x9Wq0kUlu4JOcrkHxHWgcSiSW07ZRuCM08ZWTlj3sTtQLu5klkIPdAXFHWEsrxlc5GKVss28RlG8RPeA+rtzHlVqzRJZYizd1mAQjqf7VpSoEMblI53vWpuraUcungRuKHf4hnc42JBx45o/FcGaWY851LE+fOkpNdxonkzjAVfhTqQ34legd2jeyDx17/I16t7qVliAAGMivUQqNINaJpbHiKyq5mUfzVrr0xKVO+aLb6I42uJN9OyjxNV8Hn02ww7TtTbJ3Xbvlv4V2pi13dUH1BnegkgaTpywzJKw5nPMUZUdZQxAww1HH3fKpyddlYJNVEzfWguB2qAak5kfX2pq2uhJZiR/eUaWA6EVsHEjYQZxsB4DrUu5dobySND3JOePGuaX1do7cH8qWN+BdmeSVEUHUzkkL1wau2kcpsTFLl4BknQo1Ln6wzy61P4RaCW8kbDErFhdJ3z1qpZRSxsz2soaPG5x34z0yv62qKqrZ3ZOTdIUktZF1G2vkkQbhGbS2fjigtZXIhE93E6hc9+MgsmDy28c1TjEd2W0x6bhdpIl5HxI/XWkri5MLRom0mkPq6rt08Dii6SExyyOfBrXsNF2NuNV6I4tQxo7PXJ+Y9cj0otothLmOF5oz0Mq6s/Ll9tTCO377EY8AdzTdpY6yCQezBxg7DPnQjJp2i3yPj45wqYze2EkRBYqVO4wedAVBgeVU2RYEYPIEY97OrGoUjOmhgQw0M2FcHuk+Hkfsq8M+6Z4ef/ABlxvE/6ArCJZFXOMsBWbq3MFw8RJyjEeo6U3ZgB3mZcJD3m/L5/dWvEdM0sNxGc6kUMfGqc/vSOePx5R+M5S00yer6Y3jkUEDdPSgo8mRCdxkY9DvTUkerAGNe+M/rzNaMARFKBup0tTaTKYcjlBBtK41gZxsRQZIjPcM8Z/dINGPEn+1MyRvvLbMBIBup5OPA0oZe1mlkjUxsIwsiHxzvSl4ph5bydbc3DL2kbd14WOQfNTnY+VEs3t72LXZTMTjeF/eHoeR/W5okSobZVbBRlCtqPIHma5i77fhfEZFMfZ6Tg6WJHrXPJuLPRxxjljvsuWh7GWS2kUhlbugjB9KDxyIy2EEsccg7IuGcgjGTy9COvj51vYcSt+IiODiAInJwsoO/lROMwXPskluX1aEEqlOTpuD+BoSlyQcWJ45h+GyC84eiM4MyYC6jzH96HdjFs/gRyPPNc1BevDbDQxBRwc+VX7if2iwFzHssmVYfzAc6OOY2bF5McMXtP2WOfM4yAOpNGtLqC54rFBaLm0iVtAG2Dg5NKXtweF2sEUMgM0mDLtuoIyo/E176OPGj3OjBdIGcnoDjlQlPlIEcfGInxc5043J2rENvJOscMQyc4Hl50CMSTTqshyUG3xq+qrw2wnkb98VKH+XI2H4mrcqJqHs5l42lk7MNnQOYHOvUa22Bc82r1MhWChkyCSNsYFNWuJGERIKxd4j+I+FTo20A45nkKfhZEiij3VwxJfxyKvZ57jooQKGtZZCPe2xRWYrw1JcjVG2fXxHypa0zIoBz2KNl8daZtcNKEIBQE7eOalN2UxRcNnrJmlEserCgKxAHPI8fhSt72bTKibBcqtYidra9ntxkv2QXb+U/lS07v7QGI3UHIrllK1R6eHHU3JdFXhZhVci6SOXV3Qwpi97a1uVvbVhlh3l1Zz6dSKz/0+H2C3EhEMgQZYtkHz260vZQNPcmAyloOYw3MUngq9OzDXccV3BeWrYk+sqjlSd0oa4M0b5SQ5OTup8KoJxC3hWRYbSJiOWVyTXopOH3yGKdOwm+qxOzfr9eFKZSrYtYp2kpIUsiHmKrvcNAyW9mrvcSDJAXIUb+NS0/7NTFIWTG4fxpvhltNfWHE3gkLzugij3GfH+1FAlJylvoctRbpMsd5G0MrbDtxnX6Hkaovw+07KRVZYiq6gwHdCnx6Yrl+FnidvI1teQz+zFcOkxJUeB3/AAqjazi3szI0wlnIIhhIOH08gfj86xq9AWkZYJ7cAoxwBqbfA2G55jcb9QR4Vs0hmgRLciTskXdd+R3FAgmvb/h3tF+XJLmPXpxkHkD6AsPiKd4dEJL2DskMRWEFgw5k8j99NGVSJfIgnjaYBmjdg0Jzjp1FaBcvLF/GNQp3i1qxvZJIiA8cakkDx1c/PakIWaW4EmMbYrq5WePHD+JNx6HOH3YERR4ElP8ACw39QfGvXFrYq7TvL2JmUBnD61390nqPjSbBrefWOv3UzC6cSWWzfBQbR5xsSOQyNsnNJNNbR2/HmpakhgQPHbKGjLKMAOneU/jSd/aQXdvrklImjB7zHIKjJyfQH5VES9u+F3LQiRoWQ4BHIjwPjRbq/wDbOHTgxpFKI9RKDSD3t9ht154FRcr7O6OHi7QvJZRC1NxZPIzW84GpiMHO4Ix51U4RdNxKJ7eTdghAB5gciB8qhcNuooJHiu1PYTrofHTwYelHc3HD7gyoRlxjWPrDowpCzVikkDQTTQMAWXfA3Bq3wZ2fhix7HspshSfBS2PjsPjQOOSRPNaXEQQLJGBsN1/OlLCR4o5FjfB3xv18celBBf2RtxO6W7vpb7B0OBgU5wpWtOGzFyFec6cHbSM7k1HbPaRxREqqb5HT9flTnFpTDYwxkaXkGrBPJenx60V2LJaoft41s7ie6lUaYo0KZ3DsThd+R5Zr08zS2CBnZ2cs7Ejn0qVBJKeECNzzlATUcDcE/Ad2qkydi0UDPq7OMZbxJ3P4VWDt7IzVRJ1vnsjnocVmt4x+1kXHXNeq3EhyEbZdWpz9WmJVy8aJ1XveVAsslJPUU1bD/uHyfj4Ve9HLx+xSUrFw9XiAGnKkDqOv51twzaXsmO2danxWgWqiRxHqGGJA8vE/YB860uitvepCx1xRPlDyyp5r8Khk07LYVzTgN92bi7y2+VZYQA3ic1OuZGaaYuQWd8bDGMbVX4QpeWa6kBCnVP8AADAqPDC9zexRrjXI2Tnz3qM+jq+O3zf6VFSGwuJ4FkS4VtS5C68Y9axgcPul7xZDgajtnxI8qP262o7C1XXNnfC7mhXVvO8ftF9IQ3JYx3m+PhUy232awwBLkvFdBYAdZJGT6Ui5aWZ5CgEbEkEdK3RFVZGGH0sAE3wc9cU/PPcWcEckpjkR0GYmj07eR5jlQN+gHtpS2FrxBC8YHckUZIHlWjXSwOrcNjkjX3X1nGuim3gNus1vdSGNiAwXGEB6b9ap8NNjZ28808QeJ8qoY77czk9BWBSIslxd3pEU0k8cmcjWdqsjhZvI7NprhI5IMa9H1gCCMeBzQE4jwu/nWyjEhd9kEh1BiPAjGDR7e2E2uMNNGEGolnAwOu/wrDeRT25obu5s5y8sMs7NIRuq4OyqPgKcspmgurYyyR65Xy+DnSACAvzNO8P4lwRLdrOIdpE+SGI989W3/wCam2dvbF4ldmMdwCYgRhtOANXxNGPZPLqLspzMsV5fgIWjaNHZeZHp8qjIwtbjJAdc5AO+pacilltuISRTnWSgUN4gZx9hIpG+gWMdpExyfqY5eldCWjzozSycX5LElklyiiKUHtBqVZDggevWoUFnxCznuBJDIjF87DbHQgitrLi8K6YL6JtA2yPq+BHn+FM3t9e2DMY5BLBINUUit3SKm5NdnYsaa12ZvYbXiMKi5ZIp+Xa88nxPh61CuoBw5jZzsGM0neJ30xg4H25+ym5fpLfJEmVRo22bUg+X96XaXtOJhmI0zQIwz0yoOPvFTtNl4xcVsUu7F4kOcMPqkciKYuXaT6NcOeNWeSO4eIgAk4IyBj4Vuy9kJbdWPZshdAfqnwFG4BNMsF1bxyaZB+1jbHJsfkSKzQybJ8lnxdrZY34fdFFbWvcxjPlzpbTPbyvNLbzxqByeNlyfiK6GPil00WqW4kBJz3p1G3pW3/Ub1QGhkEuo4VC6uCdugHiRS0bk/RD4Tatcl7mVtNtFhpJOh/lFL3l0eJcVDldmbAFUuNytJOnDYD3VOZCowGY7k4oSW1vZRGXqB7x5/CikaTGV7IrLHKAY1Ac56AEb/LNHJW6SS6ztpLDbrkDFJ8Nd4pjeXK6VuP2aoRzXx9KIkzPBLp0rEjLGij6oXNUj2SkgMcn/AHUvn+depWbUsp3wfzr1dF0c7jZiyGI286LDjMhJwG6/fQ4sJAN+8RnFGtbQMRJc50jcLVeiEt7QSJ5XZhbjA5az09KPPEvsqqckg7Z+01spQQk8lBz8KFPIxtjI5GTyHgKlk6K4f9kUWuEt+EzKrDXKoiCjotTuGNm+7TGcLj57U7xWCKHhtiyljPOoc5OwHp8RXvoxEHlmmZATH7meRPIfnXNN2dmHHxiypEs0Ebyz4jjBICogBY/fSj219fSfueyjPljFUb2aa3ksbaOcAXEgRpNOSB5eprALTwqrMzHVLFueTq3d+JA+2lC3Qh7C9kUlhudDtnbo2PHxr13bzXYjW9uDucrtjHnTfEp828Vwg/ZkFDuO7n089qjtM0zzzP3m2wVGwwfs60knRopvZtBZkXpsxMpAJ0nkD5/KqnF+DT3XCre0ieNZE77LI2jWCByPkRmpOJJpGkQqJFGob8wBVlPpNaXltDHpZpwvu9nk5xyzTDfsmcJ+jU9lcpc3E0GIu8EQ6z61ev4YbrgjWkXZRXFz+6Oe9N1Iz6ClbB5pOIJP2fv9zRjocin/APpMbcTsrqR5XaJysRVwFGx2x57/ACoGuznuEcB4knEEnuoCqQuVwx8Oop2GEPNb3YOXa3TV4DptTl9NFa3N6l3IVlkDvGobJZcHvAdABt8DUuyuFZLaJEHelEXPfQBTwdOyWbG8sOHsY4iTJGjqpMkZ+qMnnQmieeEuEf8AmOMaTRxdq17NFF3dd7GF07YRBk/dU/jlwZrTsMk+1XJJGelUeQlj+GopX4Mtw6RJAtwqMTHqYKQSB/FWtk7W7tYXMQmgfJVGjyQfFc03c29xd3aSW6sIo1VGmzpUDyPXbwzQ+LcXWGQG0cTygY7TUO6PLwpHMv8Ajp6Eb3hdvHOml3BbvMjMOQ3xgfKk0s7q7m7Z7crGOQXbYUmbqaK6WaeSSSZeS9MGrPDLkXMixvO8KkZX62oUieyjTom34kDRastgld+fpXRcA4KQNc478neZdwEHnjrR47eC4u0dS8ixnAaVQMt4jFXVlSGHREMZG586zDFCM3DuGowQWMZxzzkfjStzwy1t75cWiRQyhTDIhOoEcxucfZ0p3isy21t+zL98jvOOdNxwreWTQTb93UpHMMOooGaOF4pw+4sOJm8cGS2b/UTkOnLpQZFjlZWu+7CNwvVjXW2dvLcxyQXQD6WKSE7Bh4/KoM3BLC1uGM9xNImrCKjAgeR60yBKNku9mlFw2rupHHrCAfIelGugLbh1vCFIm1dpK2dsnl8ao8QW2nMItUAdAA2ptsdMk/A1osEbxvLM6uqkliPdLdPWnj2SmRZZBJobABxgis0O5BWXDDcD9fdXqtZKg3Dk7aaR27oVcgDfHgKbDHGD6k1OsZeybU5wMHIFP28AucGYkKO8VHhVZM54x2ZhhaaUQAjQO85PL/janOIRpb4hBWSGeHKy9Sw6eXpR7GzZyIu0ZEYhZmGPXSD5Z+6q1/wCxeyjSCWZJEOQS2sAnoa5Zzs68cFF2zl7yftobRS28MJQn0z+AFU/o5iKFd8ZwT9tRuJWV3w2Qw3cRXXssg3Vsnoaq25EKxgHAK4P51M61sduVF4kQMmlopWRT4E7j7QPnRYrhS0kzgpkqt0v/wBpxyceVIKwkmltyxXt11IR0YVmO/eRlWUiK690tjuSY6N55ok8iMcbZoreZUl0iXvmML3G/mU9D1xU6G3k9jlkEcbBANT5YN9hwaYv5FWMr34wDlo23XPiDWyTxR8KmAbDOMYzsRUcgsdKgXBmKz6mYsea59OXpTw4Clpfx3kMpFtKCybEMmQRjY9CflUrhEpDBthpXOSMjarttxiOM+zzDMLd4EA4Vqoaw0XbMyt2qzIMgl01Yz5rg/ZT0UxDQhTEwUh9InlUZwRgDT+s1rw65sZpMqFZCN+z6HxxTBvLa0cFY3l73fc7BV8s0GGjn7zM30gu/aCA8MKQBgD7pXOTncnv/wDFK8OHZSa2IHZrnPgxrFxfJxDi3Erm076MsYTIxnGlfwNaSo2rcFYZW16uh8qKHhp7DWTt37hx72oRjrgnc/HajTx2kTxT35ZhGO7GBsvm2KVkvERhHAO0kxsAM4oa2xmYPeSauuhTz9TRKNWqHbiT2+NboX8yxHur+yAx6DY49a8lhYova6bieQDIeXChfM4PP0ryOsrN3lWKFcsfqoPz8qXjuPbb6KLs3MKEvkjAbHj8+VYlJKypwz6ORzwm5khimmk3/bZwB/KARj1OaV4nwuIRSzWkfs93brrXC/vVGQwbfGpSOYG/dPWrVpdypxQIrHs1YRFcbYAxn1zWnEzE3EGIwdRYkYB2KYP/AKLRo51N2L8EsJr+yEl1IkcbLhIh4eJNe4daJbXtzYy3eJh+7JORyGDipHB/pCbZUt5QdMZ058hV3iUQvYBPbnTew95JByK+B+FA6ESrmz+lUQMb3IuIzkZZ1KuPTGRXQS3TWNrDcPsCwDHOwyD+X21M4VeXV2O1uo1SFDvzzIfKjcceV7eGWKLWIZ0kaPxAPKlodsrxBRHIyKcMu2RvuK40vfyWc8E15FoOdCd3Y6vrHG3zrrLa5MjkDrhhnpsNqhfSC2FuO0kfSLiQ7dOW9FIEmc1w/g093cyrf3BhWFm1hnwARzqlcyRfsorVTHbRe4v/APR8zSr3N8eIrPbsJGNvGZo337TGpc+uFFHEQuYjLEvZHHeRjsPQ/hVYVZyztku/2cHFerW+OVU9RtXqqxUDtED3CqeVWbaKWe57CAd+Tu58B40nwa2iZfaLiTs4lOnJ5k46V0fDo4olEttjM+QrZzgDmT4YoTn4BCD7KVvZ2kyPZzMRbR7aw5Bds7tt8vgaWPDLgSslhfFmiOFSZiVI8jW/Ze3vDCkjQW6d0Sqd9PT13H30L/ptzHJKLO/fun/UTVqPiMVAsg4n4rH2kN/w4XCacN2WH29Of2VJuEjEpijDplAxRwQUO/jvTDN9I7dnXT2ysNip/wCKmvfzXN4iXcfZvFHoAPOgWx6YQo0kYaPaaJsgeJ6j40O6CygXcDLofaUMOTefhmjw4S5GRlX2YV6ZR2kklthzusqcw/jqHjWKyjZNk1YMTs6ZXYP7p9DypSa0kTKMMY6EGqCh11C0mCKSD2M2+PIHwrCR3SLj2ZlPjC+3y5cwKxDi0LWCtFMY8MoCkDJoxkYg6pJ5BjkFAzvjpWUtbkpiOCbAwNJAxWTw65c5kWND4s/L4VgcGxbRLA+pf2JGcksAx86HAZbi6jg1mXtnWPEhJByQPhVKPhVvuZpjJ4rGMD5mnYoo4ADDCE0kOMbk4Ock/DHnQoqoUtgl4ITH2fDCrGUgkM+cY309McupPKnJ7PTweS3bPaDJ55UFfA/Osuxtph2WHhkGY36MvT5fePSvXd3JHwm4aUKCQUTbdmP5CgRT2QUIjj7zaE8B7zUI30eoqztHCOYQZZ/LNKXxCSdlG0nLcMevwrNrbLp7W4OIweWeZrF7KEd/LPCEitljtlIVM5bU3gB1OetPT3KW3E7e01htB0yMOQJG+fjSdn+3uhcOp0WwBRAPrfV2+GfhU/iCNbkNcOWunOvAPuUSVWzuLd1Wbtyw1Z1FT44qXc8Uh7OZzqwMnUNOwIAHPyUtt0Zam2d7xC8hW3gtDPORhm1bAeY/vRJfoxxFozJxFo4hzADB2ZvE+FM3a0RUEns55iymJm21nNfQLO6QcAiIGZJxoZvSuG4jE3YgFCpTf4VZ4HxmA2sNjKCWaQgeAJ/vQ6OhHQ2ytMwLtkIOXQVmW7dZSkL6Qv1vPxp2OL2ex7NhiQ+8fAVzjXKwyvHOdDKdieRFFGbpBm+kNtw8ldcIcfVbLv8AEDkfU5pS/wDpXZ39nJb3CBAw97SQV8+tROJyWvbPcLaRu2ffLEZ8yBzpDhiJJfW8c1usyTOI8MxXmcZyKXyC7RWsYJ/+rmUydm6N2KhhtkdCRy5Zzy9M01xJRFeS4AXVvgdD1+2l+Fu1xxW8i0BEkAKJnkoGF9T3R8qauWluraJ2Z25aQxzp8qrBEJ9ke4LM+gKTtnas1aWyWNf5zzNeqtE7J3t7zMiLChBGxcZPrVzhTRt9H31MVWKVhIV2LLnl91S7S2ES65M62AB3xjyH3f32rW3vU4Yl1DJD2qzMHjc4Khh4+Arnb2dLdnTWn/eojSs1vFg9ng4JG32fnQHsb8TSC3v1MerCseZGOtc5c8Xu7lAnaAAnJKDB++lEvr6Ek9vLp5+9j7aDYVE6yWHjlnbuWeIxDmdR/Koc5nvr1rmbCMTpOkciNvwoEXGeJNpQS4LDAHPI+NFtJOzXJBIb3vGsNCNPY9FOQwSbSkn1SeT+hod1A73JnifQ7bkHbf1oihJUIRlZf4GAP2GiIyxjCxSJ/QzY+XIfCsdFWL9pc8pVV/XBrddZOPZ1+FMl5SuQmB/E9Lu6f+RcZHRQcCsbikbqTnSqICOijJohwCA+7nki8z+VLxSSTkpbrpQc2/vRWKQoRHux2Mh/CsD/AIbagpOo7A7gfdW7yEAk++SAfDUeQ+FKQksVlG4ziIdGbx9BW2cyMi7rF3Qf4nPvH8PjWD2ZlurqyhMlqwOtyBEwDLsCScfCkeI380qiS4k1zAd1QMBR5CvcWm03KW0QLGBN/AM2CfwpGWJo4u0l5nlSkJJcgUCdvcd490DLHyFPToUVWkHMdxP4R4+tL8NQSl4urMi58s7/AHVavI4yxllHdGw8/KgUjG1ZIM0oi9nErRxZMjFdv1nlSFywGNgDzI8KfYY1eRBceBPIfCkDFrlkc7iiIuypwjjs3Dh2kcSsc6T4mqq8Yu+ItEGjWOKSQKd8kjf8q5GM5tpCehWqdtc9mkePe7sgHpiimwfjjJ7Ol4hYCeEsAA45bVyF7amFjIgKMp3x0r6HYT219bhkYAOO4/n4HwqZxTgXtEhIwrjmPHzo3YrjXRzPD/pVxSywksntEWfclGT8DVSbj3BOIwFbj2i1k5g6Q2k+tTeK8F9jXUWUdMYJqPa25uLkRAn1Ax8qHTDdopXJtJpEht7p5VcjOmPB+GaoTWfD+FR28k8Fz2y4lUCQYGDnJ+NPcG4A8M8bGHTHkFmbmfhSX0zl7TiskQO6RKCPDJosCQHg/FY7i8ZpIgJIyTDJyKoW909DjPyqnYywm6uLbGFDalz58642zdorhWU99DkfiPlV17oRXUF4hLRkYJ8v191UxsjkVF26lEc6gDYqfwr1Sp7xLjiICuGURbY9a9VyRoz5xkgvjII8P1+tqTuZNiFII6jHOt5JMA6iSWGx5/odPhS65Zsk8q4WzshH2ZiVs4UBRz90GtZQTESNhjFMae/7p2x15UncyHLoB9bH21rHXejeAO7GZN2jOQPHG9VRpZRIB3XGSKl8OYLMF37y6vzp63YozwMfdPdz4U3gaG3szJDNF+0jzInQjmPWtV4lKq6VZi3gQacj7VGzE3PpmmVafOp44Vx1YCsmO8ddMmxpxG7fZWRepJwKZisYkYdoTPJ4DkKJLcpjU9x2ngsY2rGp9Guf9nF0ReZ+NYHFDIUle+wEac1WlZCJpimdMK7yEdB4eprcvJIFCrpzso8PM0EESTJaQ+5nLt4+JojN+EFkuOwtmuQoDt+zgjHStolFsiljlYhliep5mkzL7ZxMsB+wtdkHi1Z4pIVgWBTqeQ77/P8AKgLdJnrTiVlbxyTy2/bXUrlu8eWegqVf3Mk8peUBcnZR0q3eG1tLcSR2kNvIRsGI1/DrXMyydrMx8TQIL2PcMnWCZZGB97oM52I/GnxcNc3Ot/cjBcjOwx0qTbhi2iPmds1SBWG2kjB+qFIG+cnFahuTqj0sXZWAMp5kySHwHMn8KnvmGLD++w1EDxPSqty4uIRGNIjkkRSc52XJ0+mRSnEI2aYsDgRjWxHMZ2AohfmiaqFIQh95zkjwxVThnDYuJq7SF0RBpjdfLr5jlUzsSksIkOovzzXY8M0a8DYBQKKQN9A+G8GFlOHW8nK5GVAABrqitysKO2mWNhtkZIqaVEEi75HPNU7KTXbyRMSQAMEedKxjkvpUwkIVIymSc1L+ilp2/FV1JlVbvYro+P2hkg7RBllrH0Usext3nC9+U5Hjim8E2nyOhneK3XSi97cCvm30iuFH0luw+4GEYeOwr6BxAMoBYjOMYHSvmv0gDSfSG+XT32cFM9e6KAXoVUKt2ulgwbAB8+gNOxFdEtu3uc18s/3pSCEN2gXbK9ohP66GmSjTM11HqVmTJGNj5+I600bTJzPWqhLll3BCnl8K9Rp3SHiDM67Mg2PicV6ug5gLNKkhiulZXVsMDyzjpR4V3yozVXh15a3UEgvdLxzbkMN0bA29NudAubKwihZxlAeREhxXG0dil4FZ3jg3Y5bkozuR6UjMScyHGW3OPOtZXTSVhUhf4jzNaO//AGoHUkZoDxHLVD2KPjvRt9nWnZ4tY1J74GRQ7M436MM/ZTCjS2G6bD0prKqP1N7Vo7uIFJAkq7MrGt5IFVc3NxEAD1732UpPYiRyYX7KX1wDWsXDJtWbq4UfyIdTH40Rbl0Me0wRHTbqZJOmR9vlW8as7h5TqkG+/JfSspCkX7OJQp8fCg3l3HbIVHM/aaw/XZtfXgt4SF3dttvurRtdjwsn/wAq4IA8d6Bw6F7qf2m4/druoozSe0XDXTDuJ3Yh5+NESwlnCsCrGfqd5/Nq9Zob7iEkro5jUFVYchQr2T2a0VAe/JzrWCY20YUdpbS4yHBOhvWgJN6o04wtnbj9lrklbmXPKosQy1bXc8lxMxkbWc7sOtEtQB3m3xyHiaAiH7SMRJucvzJ8BQri5xIyqeXWmDiKF3Y7qMk+LHkP14VOsYjdXiR/xHemMynIOys41burF2DnyyxJoku0May7SXUwdlH1VA7qn4CmrOP2u6vGAHZJNjfoFUdPj9lTCWkgUlmJMjMx6kkDrWoHLdGZlSTDkDvZ0kdB0/On+GXLd7Ue8mzADmOhpYxB3CscBQAcDnTESNGzTqp0nCn9fOmQvJt2dUuLixSZBqHkeVesLnsZefdOFOfCleDziIFFxpPQ0WWMMWlhXb6y9V8/SkZeLG5mW4kkjdQCTyB2Ipm2thbQAKOQwBmp0JZnDjGRt61UnkZLUlQuvGw86AZUIcQBigkZQq5YVyP0msmuII+KW478WI5sf/FvwrrOJwt2NvEc8yzb74FS410XD2zgNFcKY2B6hvypicjk4sOH0EKwPbRZ2xnZlPkSPnWEdYz2IyuXxg9Ad6xAq9pCpJbVC+f16gn4mtrtT2UeAd3UePWmXshJ3o04lIJLssqnGB91erXijNbQqSoLluvhvXqpZNRAxOytlWZfSiHVIPrEj40CKjxP2bg/ZXMdaNQuplXxOK8FVrlI291jvRAB7SAvunDihHIuUc7jmaHkZaKSKUiKn34mIP503ETPENIywpMv7s674GH8x0NYV2t5gV9x91olIypFCOdQpSSPWB4nBFHhy28EfZJ1ZtyPjQBdBt2ti7+OOdAma9u+62m3i8z+FFJjc6RjiF8kAEFsdbnmRzNAs+Hz3MnaXGwznH505w7h6SOUtENzIPeYnAX1/KrLfR/icyqGnjijI5hTRJOV9ki4kTSLOEg599h4VvAqltbHEUI28zVmH6HKLYtb3jNNzy6+8a5/jbycNBsnQpIoycn3vOtZlJMmXl32t6WIyAep5UO54k0kRtwAY9sb40nypI6gT1LVe4HwSC7jf2tiNalQRzjO2G8+tAmyHGnfyT0GaoWqhj2hGAvu/nWl9Yy2V41pLjUp0MV3BIAOR5EFT8aftIgSNW0UW7/DpRRjWa1nugtvEAqINcjE4A8B8Pxotk9pbGSK17+kDtJmHveQ8vOkJb957mVWYLBGNSxrsM4O58TROEWct7M0YfQnvzP/AAimFchvg1273F6beFpTJI+FTJO6gcqaj4VPaWhuL5MBRqEZOSeQGccsnH6GD0fB0s4uHn2RBFACcN44+sam8duGuVi0fu3bUo8QuwPxJPyoJ+A8K2TbSBp5ljGxO5q5aRqytC8fd04I8BU6yt3jy5HPrV22VZHVmGkyDDL/ADVm6HhEh2cpjnljGS0LkfLlVRpu0TtIHMTgYxjPw8xUz6S8OuISOJWgyo2lUD7aW4VxVbjuucMB1rVZk0nTOjtrnUAJ7MFgN2h2z8PGm7m9SGHKxuxxkatgT4HzpDhyyNIQDnJzv4Vjib6WSMncbmgEXt5JpruaW5cu5Q78gB4AdK8MFl1jdGBz6VrZnDyv9VUxnxoUspVzgjvADHnR8ga0cmV7G9aLH7sNFnx3P5mjzOqmAPyWbJ+NE4zayRTsxTS0g7RfNv199JM3aQEjbtBnHgaqujkl2a8fA7NGHVvwr1LXBe87NCcd0t8tq9SPsK6No/LatxzrSP3aInvCpHQZPdlx+sVkEe0nG6hcV5/3w/prWL/FPQXY76N4rgxSHTkxnofup6DsnTsyS0R3Uj3kPpU5/wBzJ/VWI/3Y+FOKmXFtmXlxCIDoHUgitWtI5WOm4MoQ99gcKnx6nyqc3L4H7qdsv8htv6m/9qFhk9HQ28sPA+HrJEoLuMjP3+tX7W8a8gt+8FWUamHUfreuY+kP/i+n4CqVv+/T+hfuNYmyujx2tz7LEGZgem5XzJ5VB+m9nHNawXDaTPDnP8w6j4c/hVg/6n/41O+lv+XQf0y//rNYCOLhttbjTHz61e4ei2oMjuFRMGRvDHT1NIWXJKc4n/k1v/u0RmyXxeeXiHGW7GEh9Kk6fNVx/wDEJ8c1pLNGsa2ludSqMyN/E2Pwpq1/zG8/2F/9FqLw73F/pNFCsDGhlumRVLHABAHM52FXuJOvCuHLYQvmaTvTMOp8PSpXBf8AO0/30++j/SH/ADR/11rGRQj4nNdQ2XCLbKvKVQkcx5/DnVy+WMXIjiGY4kEUX9IGP71y/wBGv/q6w/qb/wBGrpp/34oDooW8KNZEDGrbNEg0d+XXo0nvDGcZrSz/AHL/ANNCtf8AGH1FCy1UOy9pNEQkZYEb4POuQ4hYpY36XEAYRysUZCNlJH9q+hf6fwrjeO/ux/vp+NaLoWVNMocNuVhh7d2OcYx6VmyRL27mnuD3eY3+ykY/8Cnoab4b+6f0NMxUEvngU6IRheZqX2g1NMw90d0edNXn1vQUhJ/hj60UGQ5x+zM1jEwGXEan4864uEkTPHkd1sjPga+h8R/wEH+2n3V86X/HP/SPvNFMhlj5B+5eSkZ22Hx3r1eb/FSeterEz//Z"
+                alt="Bosque misterioso">
+
+                <div class="contenido">
+                    <p class="etiqueta">COSMOVISIÓN MEXICA</p>
+                    <h3>El Mictlán</h3>
+
+                    <p>
+                        En la tradición mexica, el Mictlán era el
+                        lugar de los muertos. Su recorrido se asociaba
+                        con diferentes etapas y desafíos.
+                    </p>
+
+                    <button class="boton-secundario"
+                    onclick="mostrarHistoria('mictlan')">
+                        Conocer su historia
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="seccion ofrendas">
+
+        <div class="titulo-seccion">
+            <br>
+            <p class="etiqueta">LA TRADICIÓN ORAL</p>
+            <h2>¿Por qué seguimos contando <span>leyendas?</span></h2>
+        </div>
+        
+
+        <div class="tarjetas">
+
+            <article class="tarjeta morada">
+                <span class="icono">📖</span>
+                <h3>Memoria colectiva</h3>
+                <p>
+                    Las leyendas conservan relatos, creencias
+                    y recuerdos de distintas generaciones.
+                </p>
+            </article>
+
+            <article class="tarjeta naranja">
+                <span class="icono">🏺</span>
+                <h3>Identidad cultural</h3>
+                <p>
+                    Nos acercan a las formas en que diferentes
+                    comunidades interpretan el mundo.
+                </p>
+            </article>
+
+            <article class="tarjeta rosa">
+                <span class="icono">🌙</span>
+                <h3>Imaginación</h3>
+                <p>
+                    Sus personajes y escenarios inspiran cuentos,
+                    obras artísticas y nuevas versiones.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="detalle-leyenda" id="detalleHistoria" hidden>
+            <button class="cerrar" onclick="cerrarHistoria()">✕</button>
+            <h2 id="tituloHistoria"></h2>
+            <p id="textoHistoria"></p>
+        </div>
+
+        <div class="titulo-seccion">
+            <br>
+            <p class="etiqueta">UN LEGADO QUE CONTINÚA</p>
+            <h2>Las historias forman parte de <span>nuestras raíces.</span></h2>
+            <p>
+                Las leyendas son relatos tradicionales y sus versiones
+                pueden variar. No deben confundirse con hechos históricos
+                demostrados.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- Ventana modal para leer las leyendas -->
+<div id="modalLeyenda" class="modal-leyenda" role="dialog"
+     aria-modal="true" aria-labelledby="tituloModal" aria-hidden="true">
+
+    <div class="modal-contenido">
+        <button class="cerrar-modal" onclick="cerrarHistoria()"
+                aria-label="Cerrar leyenda">✕</button>
+
+        <h2 id="tituloModal"></h2>
+        <p id="textoModal"></p>
+    </div>
+
+</div>
+
+
+
+<footer>
+    <p class="footer-logo">🏵️ EL ALMA DE MÉXICO 🏵️</p>
+    <p>Las historias se transforman, pero siguen viviendo en la memoria.</p>
+    <a href="index.html">← Volver al inicio</a>
+</footer>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>

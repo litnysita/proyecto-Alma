@@ -1,0 +1,602 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #100817;
+    color: #e8ddea;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3, .logo {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    background: #160d20;
+    border-bottom: 1px solid #583066;
+    padding: 18px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff0d6;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.calavera {
+    font-size: 2.7rem;
+}
+
+.logo small {
+    display: block;
+    color: #ff941f;
+    font-family: Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    margin-top: 7px;
+}
+
+.encabezado nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.encabezado nav a {
+    color: #fff0d6;
+    font-size: 0.82rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.encabezado nav a:hover,
+.encabezado nav a.activo {
+    color: #ff941f;
+}
+
+.menu-btn {
+    display: none;
+    color: #fff0d6;
+    background: transparent;
+    border: 1px solid #a84bd0;
+    border-radius: 7px;
+    padding: 7px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* PORTADA */
+
+.portada {
+    min-height: 530px;
+    padding: 65px 5%;
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr;
+    align-items: center;
+    gap: 40px;
+    background:
+        radial-gradient(ellipse at left, #381340, #100817 65%);
+}
+
+.portada-texto {
+    max-width: 550px;
+}
+
+.etiqueta {
+    color: #ff941f;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.portada h1 {
+    color: #fff0d6;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.portada h1 span,
+.titulo-seccion h2 span {
+    color: #ff941f;
+}
+
+.descripcion {
+    margin-bottom: 28px;
+    color: #e1d3e5;
+}
+
+.boton {
+    display: inline-block;
+    border: 1px solid #ff941f;
+    color: #fff0d6;
+    border-radius: 25px;
+    padding: 12px 22px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #ff941f;
+    color: #160d20;
+}
+
+.portada-imagen {
+    min-height: 390px;
+    border-radius: 12px;
+    background:
+        linear-gradient(0deg, #10081733, transparent),
+        url("https://i.pinimg.com/736x/b7/6e/d9/b76ed96dec4d619e13c76d4bd3732a2f.jpg")
+        center / cover no-repeat;
+    box-shadow: 0 0 35px #b44a5730;
+}
+.historia-foto img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.historia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.historia-foto {
+    flex: 1;
+    min-width: 0;
+}
+
+.historia-foto img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.historia-texto {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+    .historia {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .historia-foto,
+    .historia-texto {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* Fondo oscuro del modal */
+.modal-leyenda {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(8, 4, 15, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ventana de la leyenda */
+.modal-contenido {
+    position: relative;
+    background: #21152e;
+    color: white;
+    width: 100%;
+    max-width: 650px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 35px;
+    border: 1px solid #ff941f;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 148, 31, 0.2);
+}
+
+.modal-contenido h2 {
+    color: #ffb14a;
+    margin: 0 35px 20px 0;
+}
+
+.modal-contenido p {
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #ff941f;
+}
+
+body.modal-abierto {
+    overflow: hidden;
+}
+
+
+
+
+
+/* SECCIÓN DE TARJETAS */
+
+.explorar {
+    padding: 65px 5%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 38px;
+}
+
+.titulo-seccion h2 {
+    color: #fff0d6;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.25;
+}
+
+.titulo-seccion > p:last-child {
+    margin-top: 12px;
+    color: #cbbbd2;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #21132b;
+    border: 1px solid #704084;
+    border-radius: 12px;
+    padding: 28px 20px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    background: #321b40;
+}
+
+.icono {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    text-transform: uppercase;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #e4d7e8;
+    margin-bottom: 15px;
+}
+
+.ver {
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.morada {
+    color: #d18af1;
+    border-color: #8038a3;
+}
+
+.rosa {
+    color: #f05288;
+    border-color: #a63761;
+}
+
+.naranja {
+    color: #ffab39;
+    border-color: #a75d19;
+}
+
+/* Imágenes de las tarjetas de leyendas */
+.contenido-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+
+/* Imágenes del mismo tamaño en Tradiciones */
+.foto-tradicion {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+
+/* FRASE FINAL */
+
+.frase {
+    text-align: center;
+    padding: 55px 6%;
+    background: #1c1026;
+    border-top: 1px solid #492453;
+    border-bottom: 1px solid #492453;
+}
+
+.frase > span {
+    font-size: 2.5rem;
+}
+
+.frase h2 {
+    color: #fff0d6;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    margin: 12px 0;
+}
+
+.frase p {
+    color: #cbbbd2;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #cbbbd2;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    color: #ff941f;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/* CELULARES Y TABLETAS */
+
+@media (max-width: 1100px) {
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .encabezado nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 12px 0;
+    }
+
+    .encabezado nav.abierto {
+        display: flex;
+    }
+
+    .portada {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-imagen {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .portada {
+        padding: 45px 6%;
+    }
+
+    .portada h1 {
+        font-size: 2.5rem;
+    }
+
+    .explorar {
+        padding: 45px 6%;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+.historia-foto img {
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+.historia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.historia-foto {
+    flex: 1;
+    min-width: 0;
+}
+
+.historia-foto img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.historia-texto {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+    .historia {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .historia-foto,
+    .historia-texto {
+        width: 100%;
+    }
+}
+
+/* Imágenes de las tarjetas de leyendas */
+.contenido-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+ 
+
+
+/* Fondo oscuro del modal */
+.modal-leyenda {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(8, 4, 15, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ventana de la leyenda */
+.modal-contenido {
+    position: relative;
+    background: #21152e;
+    color: white;
+    width: 100%;
+    max-width: 650px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 35px;
+    border: 1px solid #ff941f;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 148, 31, 0.2);
+}
+
+.modal-contenido h2 {
+    color: #ffb14a;
+    margin: 0 35px 20px 0;
+}
+
+.modal-contenido p {
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #ff941f;
+}
+
+body.modal-abierto {
+    overflow: hidden;
+}
+
+
+/* Imágenes del mismo tamaño en Tradiciones */
+.foto-tradicion {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+
+
+}

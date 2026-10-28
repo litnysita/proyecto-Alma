@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego | El Alma de México</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        .zona-juego {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .pregunta {
+            background-color: #21152e;
+            border: 1px solid #633b75;
+            border-radius: 18px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .pregunta h3 {
+            color: #ffb14a;
+            margin-bottom: 18px;
+        }
+
+        .opcion {
+            display: block;
+            background-color: #30203e;
+            color: white;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .opcion:hover {
+            background-color: #59366d;
+        }
+
+        .opcion input {
+            margin-right: 10px;
+        }
+
+        .resultado {
+            background-color: #30203e;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 25px;
+            text-align: center;
+            display: none;
+        }
+
+        .boton-juego {
+            background-color: #ff941f;
+            color: #1b1024;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+
+        .boton-juego:hover {
+            background-color: #ffc16f;
+        }
+
+        .mensaje {
+            margin-top: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">
+            <span class="calavera">✞</span>
+           <span>
+            EL ALMA<br>DE MÉXICO
+            <small>DÍA DE MUERTOS</small>
+        </span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="historia.html">Historia</a>
+            <a href="leyendas.html">Leyendas</a>
+            <a href="ofrendas.html">Ofrendas</a>
+            <a href="tradiciones.html">Tradiciones</a>
+            <a href="galeria.html">Galería</a>
+            <a href="juego.html">Juegos</a>
+        </nav>
+    </header>
+
+    <section class="portada">
+        <div class="portada-texto">
+            <span class="etiqueta">¡PON A PRUEBA TUS CONOCIMIENTOS!</span>
+
+            <h1>¿Cuánto sabes del Día de Muertos?</h1>
+
+            <p class="descripcion">
+                Responde las preguntas, descubre cuánto sabes
+                sobre nuestras tradiciones y aprende algo nuevo.
+            </p>
+
+            <a href="#preguntas" class="boton">
+                Comenzar juego
+            </a>
+        </div>
+
+        <div class="portada-imagen">
+            <img
+                src=""
+                alt="">
+        </div>
+    </section>
+
+    <main class="zona-juego" id="preguntas">
+
+        <h2 class="titulo-seccion">🧠 El reto de las tradiciones</h2>
+
+        <p class="descripcion">
+            Selecciona una respuesta para cada pregunta.
+            Al terminar, presiona el botón para conocer tu resultado.
+        </p>
+
+        <form id="quiz">
+
+            <div class="pregunta">
+                <h3>1. ¿Qué días se relacionan tradicionalmente con el Día de Muertos?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="a">
+                    1 y 2 de noviembre
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="b">
+                    24 y 25 de diciembre
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="c">
+                    14 y 15 de febrero
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>2. ¿Qué flor es muy representativa de esta celebración?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="a">
+                    Rosa blanca
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="b">
+                    Cempasúchil
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="c">
+                    Tulipán azul
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>3. ¿Qué se coloca en una ofrenda?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="a">
+                    Solo juguetes nuevos
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="b">
+                    Únicamente ropa
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="c">
+                    Fotografías, alimentos y veladoras
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>4. ¿Qué representa el agua en muchas ofrendas?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="a">
+                    La bienvenida y el alivio de la sed
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="b">
+                    La llegada del invierno
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="c">
+                    El final de una fiesta
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>5. ¿Qué es el pan de muerto?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="a">
+                    Un pan exclusivo para cumpleaños
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="b">
+                    Un pan tradicional de esta celebración
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="c">
+                    Un tipo de dulce de chocolate
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>6. ¿En qué estado se encuentra Janitzio?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="a">
+                    Yucatán
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="b">
+                    Veracruz
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="c">
+                    Michoacán
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>7. ¿Qué personaje es muy conocido en la cultura popular mexicana?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="a">
+                    La Catrina
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="b">
+                    El Hombre Araña
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="c">
+                    Un astronauta
+                </label>
+            </div>
+
+            <div class="pregunta">
+                <h3>8. ¿Por qué es importante conservar las tradiciones?</h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="a">
+                    Para que todos celebren exactamente igual
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="b">
+                    Para conocer y transmitir nuestra cultura
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="c">
+                    Para olvidar las costumbres antiguas
+                </label>
+            </div>
+
+            <button type="button" class="boton-juego" onclick="calificar()">
+                Ver mi resultado
+            </button>
+
+            <button type="reset" class="boton-juego" onclick="reiniciar()">
+                Volver a jugar
+            </button>
+
+        </form>
+
+        <div class="resultado" id="resultado" aria-live="polite">
+            <h2 id="puntuacion"></h2>
+            <p id="mensaje"></p>
+        </div>
+
+    </main>
+
+    <section class="frase">
+        <p>
+            "Conocer nuestras raíces es mantener viva nuestra identidad."
+        </p>
+        <span>El alma de México 🧡</span>
+    </section>
+
+    <footer>
+        <p class="footer-logo">💀 EL ALMA DE MÉXICO</p>
+        <p>Aprende, descubre y celebra las tradiciones mexicanas.</p>
+        <p>© 2026 El Alma de México</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function calificar() {
+            const respuestas = {
+                p1: "a",
+                p2: "b",
+                p3: "c",
+                p4: "a",
+                p5: "b",
+                p6: "c",
+                p7: "a",
+                p8: "b"
+            };
+
+            let puntos = 0;
+            let contestadas = 0;
+
+            for (let pregunta in respuestas) {
+                const seleccionada = document.querySelector(
+                    'input[name="' + pregunta + '"]:checked'
+                );
+
+                if (seleccionada) {
+                    contestadas++;
+
+                    if (seleccionada.value === respuestas[pregunta]) {
+                        puntos++;
+                    }
+                }
+            }
+
+            const resultado = document.getElementById("resultado");
+            const puntuacion = document.getElementById("puntuacion");
+            const mensaje = document.getElementById("mensaje");
+
+            resultado.style.display = "block";
+
+            if (contestadas < 8) {
+                puntuacion.textContent = "Te faltan preguntas por responder";
+                mensaje.textContent =
+                    "Has contestado " + contestadas +
+                    " de 8 preguntas. Completa todas para conocer tu puntuación.";
+            } else {
+                puntuacion.textContent = "Obtuviste " + puntos + " de 8 puntos";
+
+                if (puntos === 8) {
+                    mensaje.textContent =
+                        "¡Excelente! Conoces muy bien las tradiciones mexicanas. 🏵️";
+                } else if (puntos >= 5) {
+                    mensaje.textContent =
+                        "¡Muy bien! Sabes bastante. Sigue descubriendo nuestra cultura. 🌼";
+                } else {
+                    mensaje.textContent =
+                        "¡Sigue aprendiendo! Explora las demás páginas y vuelve a intentarlo. 💀";
+                }
+            }
+
+            resultado.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        function reiniciar() {
+            document.getElementById("resultado").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
